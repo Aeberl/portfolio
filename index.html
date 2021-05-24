@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abel's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">ABEL</a>
+        <ul>
+            <li><a href="#home" class="active"onclick="toggle()" >Home</a></li>
+            <li><a href="#portfolio" onclick="toggle()">Projects</a></li>
+            
+            <li><a href="#contact" onclick="toggle()">Contact</a></li>
+        </ul> 
+        <div class="toggle" onclick="toggle()"></div>
+    </header>
+    <section id="home">
+        <div class="section">
+            <p>
+                I am a web developer with an interest in making life simpler for
+                you and your business by developing solutions that make a 
+                positive, big, difference to your business. Are you in need of an
+                a web solution for your business, then contact me, lets work to make 
+                your dreams a reality.
+            </p>
+            <img src="./img/Abel.jpg" alt="">
+        </div>
+    </section>
+    
+    <section id="portfolio">
+        <div class="section">
+            <div class="post">
+                <img src="img/moneyRates.png" alt="">
+                <div class="post-preview">
+                    <p class="post-intro">
+                        A website for checking 
+                        currency exchange rates
+                    </p>
+                    <a href="">Read More</a>                        
+                </div>
+            </div>
+            <div class="post">
+                <img src="img/movieFlix1.png" alt="">
+                <div class="post-preview">
+                    <p class="post-intro">
+                        A login page that looks closely like
+                        the NetFlix login page
+                    </p>
+                    <a href="">Read More</a>                        
+                </div>
+            </div>
+            <div class="post">
+                <img src="img/musicLanding1.png" alt="">
+                <div class="post-preview">
+                    <p class="post-intro">
+                       A landing page for a music company
+                       which includes a JavaScript powered
+                       countdown feature.
+                    </p>
+                    <a href="">Read More</a>                        
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="section">
+            <div class="contact">
+                <div class="skills">
+                    <h2>EXPERTISE</h2>
+                    <div class="expert-list">
+                        <ul>
+                            <li>Python</li>
+                            <li>Django</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                        </ul>
+                        <ul>
+                            <li>HTML/CSS</li>
+                            <li>PostgreSQL</li>
+                            <li>AWS (S3)</li>
+                            <li>Heroku</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social">
+                    <h2>Contact Me</h2>
+                    <div class="contact-links">
+                        <li><a href="https://twitter.com/messages"><img src="img/twitter2.jpg" alt=""></a></li>
+                        <li><a href="mailto: aeberlrussell@gmail.com"><img src="img/gmail.jpg" alt=""></a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function toggle(){
+            var header = document.getElementById("header")
+            header.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
+
