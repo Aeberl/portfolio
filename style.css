@@ -7,6 +7,10 @@
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
+body{
+    margin-bottom: 20px;
+    background: #111;
+}
 header{
     position: fixed;
     width: 100%;
@@ -55,8 +59,11 @@ header ul li a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 100vh;
+    min-height: 50vh;
     padding: 150px 100px 100px;
+    background: #111;
+    color: #fff;
+
 }
 
 .section img{
@@ -65,95 +72,127 @@ header ul li a:hover{
     margin-left: 30px;
 }
 
-.section h2 {
-    font-size: 2.5em;
-    text-transform: uppercase;
-}
-
 .section p {
     font-size: 18px;
 }
-
-.section a {
-    display: inline-block;
-    padding: 8px 10px;
-    text-decoration: none;
-    font-size: 18px;
-    background: #111;
-    color: #fff;
-    margin-top: 20px;
-}
-
-.section:nth-child(odd) {
-    position: relative;
-    justify-content: center;
-    background: #111;
-    color: #fff;
-}
-.post a{
-    color: #205aff;
-}
-.post-preview{
-    padding: 15px;
-    text-align: right;
-}
-.contact{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-}
-.contact h2{
-    margin: 0 auto;
-}
-.skills .expert-list {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-right: 50px;
-    margin-top: 10px;
-}
-.skills ul{
-    list-style-type: none;
-    margin-right: 60px;
-}
-.skills ul li{
+.section span{
     font-size: 30px;
 }
-.social .contact-links{
+span{
+    font-size: 30px;
+    color: #fff;
+    margin-left: 25px;
+}
+.content-wrapper{
+    background: #111;
+}
+.content-wrapper h2{
+    color: #fff;
+    padding-left: 25px;
+}
+/* New */
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(240px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    padding: 12px;
+    margin-bottom: 125px;
+}
+
+.portfolio-item-wrapper{
+    position: relative;
+}
+
+.portfolio-img-background{
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper{
+    position: absolute;
+    top: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    border-left: 2px solid #111;
-    margin-top: 25px;
-    
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
 }
-.social li{
-    list-style: none;
-    margin: -80px;
+
+.logo-wrapper img{
+    width: 50%;
+    margin-bottom: 20px;
 }
-.social li a{
-    display: inline-block;
-    margin: 90px;
-    background: #fff;
+
+.img-text-wrapper .subtitle{
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
 }
-.social img{
-    width: 170px;
-    height: 100px;
+
+.img-text-wrapper:hover .subtitle{
+    font-weight: 600;
+    color: rgba(212, 211, 212, 0.938);
+}
+
+.img-darken{
+    transition: 1s;
+    filter: brightness(7%);
+}
+.contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 35px;
+    margin-left: 50px;
+}
+.contact a{
+    color: rgba(227, 187, 235, 0.473);
+    font-size: 30px;
+    text-decoration: none;
+    padding: 45px;
+}
+.socialMe h2{
+    margin-left: 25px;
+}
+/* New */
+
+
+@media (max-width: 1140px){
+    .section{
+        width: 100%;
+        overflow: hidden;
+    }
+    .section .post{
+        margin: 20px;
+    }
+    .section img{
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+        max-width: 300px;
+    }
+    .post-preview{
+        margin-top: 12px;
+    }
 }
 @media(max-width: 992px)
 {
     .section{
         padding: 100px 50px 50px;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        display: flex;
     }
     .section img {
         margin: 50px 0 0;
-        max-width: 100%;
+        max-width: 290px;
     }
     header ul {
         position: absolute;
@@ -215,5 +254,12 @@ header ul li a:hover{
     header.active .toggle::after{
         bottom: 14px;
         transform: rotate(-45deg);
+    }
+    .content-wrapper{
+        padding: 100px 50px 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
