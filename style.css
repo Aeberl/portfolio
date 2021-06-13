@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
-
+:root{
+    --mainColor: #fff;
+    --mainBgColor: #111;
+    --img-txt-hover: rgba(212, 211, 212, 0.938);
+    --headerBg: rgb(77, 74, 74);
+}
 *{
     margin: 0;
     padding: 0;
@@ -9,7 +14,7 @@
 }
 body{
     margin-bottom: 20px;
-    background: #111;
+    background: var(--mainBgColor);
 }
 header{
     position: fixed;
@@ -19,11 +24,11 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(77, 74, 74);
+    background: var(--headerBg);
     z-index: 1000;
 }
 header .logo{
-    color: #fff;
+    color: var(--mainColor);
     font-size: 30px;
     text-decoration: none;
     letter-spacing: 2px;
@@ -40,7 +45,7 @@ header ul li{
 header ul li a{
     position: relative;
     padding: 5px 10px;
-    color: #fff;
+    color: var(--mainColor);
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
@@ -62,7 +67,7 @@ header ul li a:hover{
     min-height: 50vh;
     padding: 150px 100px 100px;
     background: #111;
-    color: #fff;
+    color: var(--mainColor);
 
 }
 
@@ -85,16 +90,10 @@ header ul li a:hover{
 }
 span{
     font-size: 30px;
-    color: #fff;
+    color: var(--mainColor);
     margin-left: 25px;
 }
-.content-wrapper{
-    background: #111;
-}
-.content-wrapper h2{
-    color: #fff;
-    padding-left: 25px;
-}
+
 
 .portfolio-items-wrapper {
     display: grid;
@@ -143,7 +142,7 @@ span{
 
 .img-text-wrapper:hover .subtitle{
     font-weight: 600;
-    color: rgba(212, 211, 212, 0.938);
+    color: var(--img-txt-hover); 
 }
 
 .img-darken{
@@ -258,6 +257,12 @@ span{
         bottom: 14px;
         transform: rotate(-45deg);
     }
+    .content-wrapper span{
+        display: flex;
+        color: #fff;
+        left: 25px;
+    }
+    
     .portfolio-items-wrapper{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -275,5 +280,11 @@ span{
     .img-text-wrapper:hover .subtitle{
         font-weight: 600;
         color: rgba(212, 211, 212, 0.938);
+    }
+}
+@media (hover: hover) and (pointer: fine) and (max-width: 992px){
+    .img-text-wrapper:hover .subtitle{
+        font-weight: 600;
+        color: rgba(212, 211, 212, 0.938); 
     }
 }
